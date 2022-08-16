@@ -11,16 +11,17 @@
 <body>
 
 <div class="validate">
+    <h1 class="tit">Password Validation</h1>
     <div class="pass">
         <input type="password" class="pwds" placeholder="PASSWORD" autocomplete="off">
         <button type="button" class="btog">비밀번호표시</button>
     </div>
     <ul class="msgs">
-        <li id="lowr">한 개 이상의 영문 소문자가 있어야 합니다.</li>
-        <li id="uper">한 개 이상의 영문 대문자가 있어야 합니다.</li>
-        <li id="numb">한 개 이상의 숫자가 있어야 합니다.</li>
-        <li id="spcl">한 개 이상의 특수문자가 있어야 합니다.</li>
-        <li id="leng">8글자 이상 이어야합니다.</li>
+        <li class="lowr">한 개 이상의 영문 소문자가 있어야 합니다.</li>
+        <li class="uper">한 개 이상의 영문 대문자가 있어야 합니다.</li>
+        <li class="numb">한 개 이상의 숫자가 있어야 합니다.</li>
+        <li class="spcl">한 개 이상의 특수문자가 있어야 합니다.</li>
+        <li class="leng">8글자 이상 이어야합니다.</li>
     </ul>
 </div>
 
@@ -32,7 +33,6 @@ const validate = {
     pwds: document.querySelector("input.pwds"),
     btog: document.querySelector("button.btog"),
     evt: function(){
-
       this.btog.addEventListener("click", e => this.togs() );
       this.pwds.addEventListener("keyup", e => this.check(e.target.value) );
     },
@@ -44,11 +44,11 @@ const validate = {
         const spcl = new RegExp('(?=.*[~!@#\$%\^&\*])'); /* 특수문자포함 */
         const leng = new RegExp('(?=.{8,})');   /* 8자이상 */
 
-        const $lowr = document.querySelector("#lowr");
-        const $uper = document.querySelector("#uper");
-        const $numb = document.querySelector("#numb");
-        const $spcl = document.querySelector("#spcl");
-        const $leng = document.querySelector("#leng");
+        const $lowr = document.querySelector("li.lowr");
+        const $uper = document.querySelector("li.uper");
+        const $numb = document.querySelector("li.numb");
+        const $spcl = document.querySelector("li.spcl");
+        const $leng = document.querySelector("li.leng");
 
         lowr.test(txt) ? $lowr.classList.add("check") : $lowr.classList.remove("check");
         uper.test(txt) ? $uper.classList.add("check") : $uper.classList.remove("check");
