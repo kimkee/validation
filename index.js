@@ -16,7 +16,7 @@ const validate = {
         const _spcl = new RegExp('(?=.*[~!@#\$%\^&\*])'); /* 특수문자포함 */
         const _leng = new RegExp('(?=.{8,})');   /* 8자이상 */
 
-        const lowr = document.querySelector("li.lowr")
+        const lowr = document.querySelector("li.lowr");
         const uper = document.querySelector("li.uper");
         const numb = document.querySelector("li.numb");
         const spcl = document.querySelector("li.spcl");
