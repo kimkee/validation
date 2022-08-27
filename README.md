@@ -3,6 +3,13 @@ Password Validation Check in Javascript
 
 https://youtu.be/Hi8DVOaZ0Ug
 
+```bash
+npm install -g live-server
+```
+```bash
+live-server --port=9002 --browser=chrome --ignorePattern=["*.css","*.js"]
+```
+
 
 ```js
 const _lowr = new RegExp('(?=.*[a-z])'); /* 소문자포함 */
