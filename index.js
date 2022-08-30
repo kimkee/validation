@@ -42,4 +42,4 @@ const validate = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', e => validate.init() );
+document.addEventListener('DOMContentLoaded', validate.init() );
